@@ -1,4 +1,5 @@
-./test.sh
+#./test.sh
+./build.sh
 
 echo "Digite a tag para publicação"
 read TAG

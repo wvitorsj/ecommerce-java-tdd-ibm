@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-        "Name": "didox/ecommerce-treinamento-ibm:v0.0.2",
+        "Name": "wvitorsj/ecommerce-ibm:v0.0.2",
         "Update": "true"
     },
     "Ports": [
