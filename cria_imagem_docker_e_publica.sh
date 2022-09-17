@@ -7,5 +7,5 @@ read TAG
 git tag $TAG
 git push --tags
 
-docker build -t wvitorsj/ecommerce-treinamento-ibm:$TAG .
-docker push wvitorsj/ecommerce-treinamento-ibm:$TAG
+docker build -t wvitorsj/ecommerce-ibm:$TAG .
+docker push wvitorsj/ecommerce-ibm:$TAG
