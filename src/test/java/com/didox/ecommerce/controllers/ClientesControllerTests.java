@@ -21,13 +21,13 @@ class ClientesControllerTests {
 	private IClientesDao repo;
 
 	@BeforeEach
-	private void preparaDatabase(){
+	private void preparaDatabase() {
 		repo.deleteAll();
 	}
 
 	@Test
 	void rotaClientesGET() throws URISyntaxException, IOException, InterruptedException {
-        var code = HttpTestClient.get("/clientes");
+		var code = HttpTestClient.get("/clientes");
 		assertEquals(200, code);
 	}
 
@@ -37,7 +37,7 @@ class ClientesControllerTests {
 		cliente.setNome("Danilo");
 		cliente.setEmail("danilo@teste.com");
 
-        var code = HttpTestClient.post("/clientes", cliente);
+		var code = HttpTestClient.post("/clientes", cliente);
 		assertEquals(201, code);
 	}
 
@@ -50,7 +50,7 @@ class ClientesControllerTests {
 
 		cliente.setNome("Danilo Santos");
 
-        var code = HttpTestClient.put("/clientes/" + cliente.getId(), cliente);
+		var code = HttpTestClient.put("/clientes/" + cliente.getId(), cliente);
 		assertEquals(200, code);
 	}
 
@@ -61,7 +61,7 @@ class ClientesControllerTests {
 		cliente.setEmail("danilo@teste.com");
 		repo.save(cliente);
 
-        var code = HttpTestClient.delete("/clientes/" + cliente.getId());
+		var code = HttpTestClient.delete("/clientes/" + cliente.getId());
 		assertEquals(204, code);
 	}
 

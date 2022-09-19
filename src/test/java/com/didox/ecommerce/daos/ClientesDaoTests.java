@@ -16,9 +16,9 @@ class ClientesDaoTests {
 	private IClientesDao clientesDao;
 
 	@BeforeEach
-    public void limpaBase() {
-        clientesDao.deleteAll();
-    }
+	public void limpaBase() {
+		clientesDao.deleteAll();
+	}
 
 	@Test
 	void validarFindDoDaoDeCliente() {
@@ -36,7 +36,7 @@ class ClientesDaoTests {
 		var cliente = new Cliente();
 		cliente.setEmail("teste@teste.com");
 		clientesDao.save(cliente);
-		
+
 		var clienteExiste = clientesDao.emailExiste("teste@teste.com");
 		assertEquals(true, clienteExiste);
 	}
